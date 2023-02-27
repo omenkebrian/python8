@@ -1,0 +1,10 @@
+principal = float(input("Enter the principal amount: "))
+interest_rate = float(input("Enter the annual interest rate: "))
+time_period = int(input("Enter the time period (in years): "))
+compound_periods = int(input("Enter the number of times interest is compounded per year: "))
+
+# Calculate compound interest
+amount = principal * (1 + (interest_rate / compound_periods)) ** (compound_periods * time_period)
+compound_interest = amount - principal
+
+print("Compound interest = ", round(compound_interest))
